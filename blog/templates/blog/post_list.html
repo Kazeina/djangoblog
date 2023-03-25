@@ -5,6 +5,14 @@
     <title>Blog dla programistów</title>
 </head>
 <body>
-<h1>Witaj z szablonu</h1>
+<div>
+    <h1>Witam na stronie bloga</h1>
+</div>
+{% for post in posts %}
+<div>
+    <h2><a href="#">{{ post.title }}</a> </h2>
+    <em>{{ post.text|linebreaksbr }}</em>
+</div>
+{% endfor %}
 </body>
 </html>
